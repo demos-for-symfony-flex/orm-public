@@ -59,25 +59,22 @@ class BlogPost
     public $author;
 
     /*
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created_at", type="datetimetz")
      */
-    public $createdAt;
+    // public $createdAt;
 
-    /**
+    /*
      * @var \DateTime
      *
      * @ORM\Column(name="updated_at", type="datetime")
      */
-    public $updatedAt;
-    * An exception has been thrown during the rendering of a template ("Catchable Fatal Error: Object of class DateTime could not be converted to string").
-    */
+    // public $updatedAt;
+    // An exception has been thrown during the rendering of a template ("Catchable Fatal Error: Object of class DateTime could not be converted to string").
 
-    /**
+    /*
      * @ORM\PrePersist
-     */
     public function prePersist()
     {
         if (!$this->createdAt) {
@@ -88,12 +85,13 @@ class BlogPost
             $this->updatedAt = new \DateTime();
         }
     }
-
-    /**
-     * @ORM\PreUpdate
      */
+
+    /*
+     * @ORM\PreUpdate
     public function preUpdate()
     {
         $this->updatedAt = new \DateTime();
     }
+     */
 }
