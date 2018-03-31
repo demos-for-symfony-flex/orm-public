@@ -58,6 +58,7 @@ class BlogPost
      */
     public $author;
 
+    /*
     /**
      * @var \DateTime
      *
@@ -71,7 +72,8 @@ class BlogPost
      * @ORM\Column(name="updated_at", type="datetime")
      */
     public $updatedAt;
-
+    * An exception has been thrown during the rendering of a template ("Catchable Fatal Error: Object of class DateTime could not be converted to string").
+    */
 
     /**
      * @ORM\PrePersist
